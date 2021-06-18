@@ -1,0 +1,40 @@
+Needed HEADERS from subj:
+
+Accept-Charsets
+Accept-Language			принимаемые языки кодировки клиента
+Allow					
+Authorization
+Content-Language
+Content-Length			ЗАПРОС/ОТВЕТ: длина тела сообщения (на основе него понимаем завершена ли передача запроса или нет и ответа)
+Content-Location
+Content-Type			ОТВЕТ: тип тела ответа (с ним работает клиент)
+Date					ОТВЕТ: дата/время формирования ответа
+Host					ЗАПРОС: к какому серверу идет запрос
+Last-Modified			ОТВЕТ: время последнего изменения документы (для кеширования)
+Location
+Referer					ЗАПРОС: с какой страницы произведен переход
+Retry-After
+Server					ОТВЕТ: название сервера кто подготовил ответ
+Transfer-Encoding		HTTP/1.1 вводит поле заголовка Transfer-Encoding (раздел 3.3.1). 
+						Кодировки передачи должны быть декодированы до пересылки HTTP-сообщения по протоколу, совместимому с MIME.
+User-Agent				ЗАПРОС: название user_agent делаютего запрос
+WWW-Authenticate
+
+========================================================================================================================
+Examples:
+
+Запрос:
+	Host: www.example.com
+	Accept-Language: en, mi
+	User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3
+	Connection: keep-alive
+
+Ответ:
+	Content-Type: text/plain
+	Date: Mon, 27 Jul 2009 12:28:53 GMT
+	Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+	Server: Apache
+	Transfer-Encoding: gzip, chunked
+
+В частности, поля заголовка Host и Connection должны быть реализованы всеми реализациями HTTP/1.x независимо от того,
+объявляют ли они о соответствии HTTP/1.1.
