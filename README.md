@@ -20,3 +20,7 @@ make
 ```bash
 ./webserv [path_to_serv_conf, e.g. content/serv.conf]
 ```
+
+
+### Notes :
+There is no commit history, because initially is was done in the private repository of @[wnormcor](https://github.com/wnormcor)
